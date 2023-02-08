@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Lab5Games.UI
+namespace Lab5Games.UIKit
 {
     //https://qiita.com/rarudonet/items/52de2fd3a47b6e0a2b1f
 

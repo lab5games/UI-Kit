@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Lab5Games.UI
+namespace Lab5Games.UIKit
 {
     [AddComponentMenu("UI/Effects/UIGrayScale")]
     public class UIGrayScale : UIEffectControlBase

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace Lab5Games.UI
+namespace Lab5Games.UIKit
 {
     public delegate void TabButtonDelegate(TabButton tabButton); 
 

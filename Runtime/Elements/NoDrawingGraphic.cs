@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEditor.UI;
 #endif
 
-namespace Lab5Games.UI
+namespace Lab5Games.UIKit
 {
     [RequireComponent(typeof(CanvasRenderer))]
     public class NoDrawingGraphic : Graphic

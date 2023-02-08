@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-namespace Lab5Games.UI
+namespace Lab5Games.UIKit
 {
 #if UNITY_5_3_OR_NEWER
     [ExecuteInEditMode]
