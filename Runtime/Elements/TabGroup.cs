@@ -7,10 +7,10 @@ namespace Lab5Games.UIKit
 
     public class TabGroup : MonoBehaviour
     {
-        [SerializeField] TabButton[] m_CacheButtons;
+        [SerializeField] protected TabButton[] m_CacheButtons;
 
-        TabButton m_SelectedButton = null;
-        List<TabButton> m_Buttons = null;
+        protected TabButton m_SelectedButton = null;
+        protected List<TabButton> m_Buttons = null;
 
         public void OnTabEnter(TabButton button)
         {
