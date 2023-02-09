@@ -7,12 +7,12 @@ namespace Lab5Games.UIKit
 
     public class TabGroup : MonoBehaviour
     {
-        [SerializeField] protected TabButton[] m_CacheButtons;
+        [SerializeField] private TabButton[] m_CacheButtons;
 
-        protected TabButton m_SelectedButton = null;
+        private TabButton m_SelectedButton = null;
         protected List<TabButton> m_Buttons = null;
 
-        public void OnTabEnter(TabButton button)
+        public virtual void OnEnterButton(TabButton button)
         {
             if (!enabled)
                 return;
@@ -25,7 +25,7 @@ namespace Lab5Games.UIKit
             }
         }
 
-        public void OnTabExit(TabButton button)
+        public virtual void OnExitButton(TabButton button)
         {
             if (!enabled)
                 return;
@@ -33,7 +33,7 @@ namespace Lab5Games.UIKit
             ResetTabs();
         }
 
-        public void OnTabSelected(TabButton button)
+        public virtual void OnSelectButton(TabButton button)
         {
             if (!enabled)
                 return;
@@ -42,8 +42,6 @@ namespace Lab5Games.UIKit
             {
                 if (m_SelectedButton == button)
                     return;
-
-                m_SelectedButton.DeselectButton();
             }
 
             m_SelectedButton = button;
@@ -52,7 +50,7 @@ namespace Lab5Games.UIKit
             ResetTabs();
         }
 
-        public void ResetTabs()
+        public virtual void ResetTabs()
         {
             foreach (var btn in m_Buttons)
             {
@@ -69,15 +67,15 @@ namespace Lab5Games.UIKit
 
             foreach(var btn in m_CacheButtons)
             {
-                btn.onPointerClick += OnTabSelected;
-                btn.onPointerEnter += OnTabEnter;
-                btn.onPointerExit += OnTabExit;
+                btn.onPointerClick += OnSelectButton;
+                btn.onPointerEnter += OnEnterButton;
+                btn.onPointerExit += OnExitButton;
 
                 m_Buttons.Add(btn);
             }
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             ResetTabs();
         }

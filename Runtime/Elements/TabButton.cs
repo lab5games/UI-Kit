@@ -11,7 +11,6 @@ namespace Lab5Games.UIKit
         [SerializeField] UnityEvent onReset;
         [SerializeField] UnityEvent onEnter;
         [SerializeField] UnityEvent onSelect;
-        [SerializeField] UnityEvent onDeselect;
 
         public event TabButtonDelegate onPointerClick;
         public event TabButtonDelegate onPointerEnter;
@@ -30,11 +29,6 @@ namespace Lab5Games.UIKit
         public virtual void SelectButton()
         {
             onSelect?.Invoke();
-        }
-
-        public virtual void DeselectButton()
-        {
-            onDeselect?.Invoke();
         }
 
         public void OnPointerExit(PointerEventData eventData)
