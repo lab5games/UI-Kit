@@ -60,7 +60,7 @@ namespace Lab5Games.UIKit
             }
         }
 
-        public void OnEnterButton(GroupableButton button)
+        public virtual void OnEnterButton(GroupableButton button)
         {
             if (!isActiveAndEnabled)
                 return;
@@ -73,7 +73,7 @@ namespace Lab5Games.UIKit
             }
         }
         
-        public void OnExitButton(GroupableButton button)
+        public virtual void OnExitButton(GroupableButton button)
         {
             if (!isActiveAndEnabled)
                 return;
@@ -81,7 +81,7 @@ namespace Lab5Games.UIKit
             ResetButtons();
         }
 
-        public void OnSelectButton(GroupableButton button)
+        public virtual void OnSelectButton(GroupableButton button)
         {
             if (!isActiveAndEnabled)
                 return;
