@@ -40,6 +40,7 @@ namespace Lab5Games.UIKit
         public void UnselectAll()
         {
             m_SelectedButtons.Clear();
+            ResetButtons();
         }
 
         public void Select(GroupableButton button)
@@ -59,6 +60,8 @@ namespace Lab5Games.UIKit
                     m_SelectedButtons[0] = button;
                 }
             }
+
+            button.OnSelect();
         }
 
         public virtual void OnEnterButton(GroupableButton button)
