@@ -14,6 +14,7 @@ namespace Lab5Games.UIKit
         public void RegisterButton(GroupableButton button)
         {
             button.m_Group = this;
+            m_CacheButtons.Add(button);
         }
 
         public virtual void ResetButtons()
