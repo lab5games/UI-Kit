@@ -42,6 +42,7 @@ namespace Lab5Games.UIKit
             graphic.SetMaterialDirty();
         }
 
+
         protected override void OnValidate()
         {
 #if UNITY_EDITOR
@@ -53,6 +54,7 @@ namespace Lab5Games.UIKit
             }
 #endif
         }
+
 
         protected override void OnDidApplyAnimationProperties()
         {
