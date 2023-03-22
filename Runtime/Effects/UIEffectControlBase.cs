@@ -42,28 +42,22 @@ namespace Lab5Games.UIKit
             graphic.SetMaterialDirty();
         }
 
-
+#if UNITY_EDITOR
         protected override void OnValidate()
         {
-#if UNITY_EDITOR
             base.OnValidate();
 
-            if(IsActive())
-            {
-                graphic.SetMaterialDirty();
-            }
-#endif
+            if (!IsActive() || graphic == null) return;
+            graphic.SetMaterialDirty();
         }
-
+#endif
 
         protected override void OnDidApplyAnimationProperties()
         {
             base.OnDidApplyAnimationProperties();
 
-            if(IsActive())
-            {
-                graphic.SetMaterialDirty();
-            }
+            if (!IsActive() || graphic == null) return;
+            graphic.SetMaterialDirty();
         }
 
         public Material GetModifiedMaterial(Material baseMaterial)
